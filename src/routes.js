@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const UsuarioController = require('./controllers/UsuarioController');
 const DecretoController = require('./controllers/DecretoController');
@@ -6,8 +7,8 @@ const InfoController = require('./controllers/InfoController');
 
 const routes = express.Router();
 
-routes.get('/', function(req, res){
-    res.send("Servidor Rodando")
+routes.get('/',function(req,res){
+    res.sendFile(path.join(__dirname + "/site/index.html"));
 });
 
 routes.post('/user/cadastrar', UsuarioController.store);

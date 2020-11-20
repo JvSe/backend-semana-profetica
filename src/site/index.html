@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>     
+    
+        <style>
+            .td-text-white {
+                color: #fff;
+            }
+            .align-center {
+                text-align:center;
+            }
+            .align-block {
+                justify-content: center;
+                text-align:justify;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class=" bg-dark">
+            <div class="container">
+                <br>
+                <h1 class="text-white">DOCS da API</h1>
+                <p class="text-white"> Uma breve documentação sobre a API desenvolvida para a semana profética. </p>
+                <br>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+
+        <div class=" bg-dark">
+            <div class="container">
+                <br>
+                <h2 class="text-white">Observações</h1>
+                <br>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="w-75 p-3 align-block">
+                <p>
+                    <li>
+                        Tudo o que está entre duas chaves, " {{}} ", são variáveis a serem preenchidas. 
+                    </li>
+                    <li>
+                        Nas tabelas, tem um campo com "Variáveis". Esse nome não pode mudar, se estiver diferente desse nome, dará erro no momento de inserir ou buscar alguma informação no banco de dados.
+                    </li>
+                    
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div class="container" background="bg-dark">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="3" style="text-align:center"> Tabela de Rotas da API</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary align-center">
+                        <td class="td-text-white"> URLs </td>
+                        <td class="td-text-white"> Função da URL </td>
+                        <td class="td-text-white"> Status</td>
+                    </tr>
+                    <tr>
+                        <td> <a href="#login"> https://dsi-backend-integration.herokuapp.com/login </a></td>
+                        <td > Rota para realizar o login </td>
+                        <td style="background: green">  </td>
+                    </tr>
+                    <tr> 
+                        <td> <a href="#cadastro"> https://dsi-backend-integration.herokuapp.com/cadastro </a></td>
+                        <td> Rota para criar um cadastro de usuário </td>
+                        <td style="background: green">  </td>
+                    </tr>
+                    <tr> 
+                        <td> <a href="#vincular"> https://dsi-backend-integration.herokuapp.com/perfil/vincular/{{id}} </a></td>
+                        <td> Rota para vincular um perfil do Instagram ao perfil do usuário.</td>
+                        <td style="background: green">  </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="#midias">  https://dsi-backend-integration.herokuapp.com/perfil/{{id}}/media </a></td>
+                        <td> Rota para buscar as midias do Instagram </td>
+                        <td style="background: green">  </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="#analytics">  https://dsi-backend-integration.herokuapp.com/analytics </a></td>
+                        <td> Rota para o Analytics </td>
+                        <td style="background: green">  </td>
+                    </tr>
+                    <!-- ## NÃO IMPLEMENTADO AINDA
+                    <tr>
+                        <td> <a href="#"> https://dsi-backend-integration.herokuapp.com/perfil/{{id}}/userInstagram </a> </td>
+                        <td> Rota para buscar as informações do perfil no instagram </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td> <a href="#analise-foto"> https://dsi-backend-integration.herokuapp.com//perfil/analise/foto/{{id_user}}/{{id_foto}}</a></td>
+                        <td> Rota para analisar uma foto</td>
+                        <td style="background: green"> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="#analise-texto"> https://dsi-backend-integration.herokuapp.com/perfil/analise/texto/{{id}_user}/{{id_foto}} </a></td>
+                        <td> Rota para analisar um texto</td>
+                        <td style="background: green"> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="#analise-comentario"> https://dsi-backend-integration.herokuapp.com/perfil/analise/comentario/{{id_user}}/{{id_foto}} </a></td>
+                        <td> Rota para analisar um comentário</td>
+                        <td style="background: green"> </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class=" bg-dark">
+            <div class="container">
+                <br>
+                <h2 class="text-white">Informações das Rotas</h1>
+                <p class="text-white"> Aqui tem as informações necessárias para poder utilizar das rotas corretamente. </p>
+                <br>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- LOGIN FIM -->
+
+        <br><br>
+
+        <div class="container" id="login">
+            <div class="bg-dark">
+                <br>
+                <h3 class="text-white align-center"> Rota para realizar o login no aplicativo </h3>
+                <br>
+            </div>
+            
+            <br><br>
+
+            <div class="d-flex justify-content-center">
+                <div class="w-75 p-3 align-block">
+                    <p>
+                        Esta rota é responsável por realizar o login do usuário no aplicativo. 
+                        Para sua utilização sem erros, é necessário que o "nickname" e a "senha" do usuário 
+                        sejam passados pela tag "body" da aplicação
+                        e a requisição seja através do método /GET. 
+                        <br /><br />
+                        As informações para cadastro podem ser conferidas na tabela abaixo:
+                    </p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="3" style="text-align:center"> Tabela de variáveis para realizar o login</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary align-center">
+                        <td class="td-text-white"> Variável </td>
+                        <td class="td-text-white"> Descrição </td>
+                        <td class="td-text-white"> Tipo do Atributo </td>
+                    </tr>
+                    <tr>
+                        <td> nickname </td>
+                        <td class="align-center"> Variável que recebe o o login do usuário </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                    <tr>
+                        <td> senha </td>
+                        <td class="align-center"> Variável que recebe a senha do usuário </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        
+            <br>
+            <hr>
+        </div>
+    </body>
+    <br><br>
+    <footer>
+        <div class=" bg-dark">
+            <div class="container">
+                <br>
+                <div class="d-flex justify-content-center">
+                    <div class="w-50 p-3 align-block">
+                        <p class="text-white"> Essa API ainda está em processo de desenvolvimento, então, 
+                            sempre que tiver alguma alteração, a documentação também será atualizada. 
+                        </p>
+                        <p class="text-white align-center"> Powered by: <a href="https://github.com/JvSe"> JvSe </a></p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </footer>
+</html>
