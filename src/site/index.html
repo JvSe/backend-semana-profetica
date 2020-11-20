@@ -71,50 +71,34 @@
                         <td class="td-text-white"> Status</td>
                     </tr>
                     <tr>
-                        <td> <a href="#login"> https://dsi-backend-integration.herokuapp.com/login </a></td>
+                        <td> <a href="#userLogin"> https://backend-semana-profetica.herokuapp.com/user/login </a></td>
                         <td > Rota para realizar o login </td>
                         <td style="background: green">  </td>
                     </tr>
                     <tr> 
-                        <td> <a href="#cadastro"> https://dsi-backend-integration.herokuapp.com/cadastro </a></td>
+                        <td> <a href="#userCadastro"> https://backend-semana-profetica.herokuapp.com/user/cadastro </a></td>
                         <td> Rota para criar um cadastro de usuário </td>
                         <td style="background: green">  </td>
                     </tr>
                     <tr> 
-                        <td> <a href="#vincular"> https://dsi-backend-integration.herokuapp.com/perfil/vincular/{{id}} </a></td>
-                        <td> Rota para vincular um perfil do Instagram ao perfil do usuário.</td>
+                        <td> <a href="#decretos"> https://backend-semana-profetica.herokuapp.com/decretos </a></td>
+                        <td> Rota para buscar uma lista com todos os decretos </td>
                         <td style="background: green">  </td>
                     </tr>
-                    <tr>
-                        <td> <a href="#midias">  https://dsi-backend-integration.herokuapp.com/perfil/{{id}}/media </a></td>
-                        <td> Rota para buscar as midias do Instagram </td>
+                    <tr> 
+                        <td> <a href="#decretoCadastro"> https://backend-semana-profetica.herokuapp.com/decreto/cadastro </a></td>
+                        <td> Rota para realizar um cadastro de um decreto </td>
                         <td style="background: green">  </td>
                     </tr>
-                    <tr>
-                        <td> <a href="#analytics">  https://dsi-backend-integration.herokuapp.com/analytics </a></td>
-                        <td> Rota para o Analytics </td>
+                    <tr> 
+                        <td> <a href="#infos"> https://backend-semana-profetica.herokuapp.com/infos </a></td>
+                        <td> Rota para buscar uma lista com todos os decretos </td>
                         <td style="background: green">  </td>
                     </tr>
-                    <!-- ## NÃO IMPLEMENTADO AINDA
-                    <tr>
-                        <td> <a href="#"> https://dsi-backend-integration.herokuapp.com/perfil/{{id}}/userInstagram </a> </td>
-                        <td> Rota para buscar as informações do perfil no instagram </td>
-                    </tr>
-                    -->
-                    <tr>
-                        <td> <a href="#analise-foto"> https://dsi-backend-integration.herokuapp.com//perfil/analise/foto/{{id_user}}/{{id_foto}}</a></td>
-                        <td> Rota para analisar uma foto</td>
-                        <td style="background: green"> </td>
-                    </tr>
-                    <tr>
-                        <td> <a href="#analise-texto"> https://dsi-backend-integration.herokuapp.com/perfil/analise/texto/{{id}_user}/{{id_foto}} </a></td>
-                        <td> Rota para analisar um texto</td>
-                        <td style="background: green"> </td>
-                    </tr>
-                    <tr>
-                        <td> <a href="#analise-comentario"> https://dsi-backend-integration.herokuapp.com/perfil/analise/comentario/{{id_user}}/{{id_foto}} </a></td>
-                        <td> Rota para analisar um comentário</td>
-                        <td style="background: green"> </td>
+                    <tr> 
+                        <td> <a href="#infoCadastro"> https://backend-semana-profetica.herokuapp.com/info/cadastro </a></td>
+                        <td> Rota para realizar um cadastro de um decreto </td>
+                        <td style="background: green">  </td>
                     </tr>
                     
                 </tbody>
@@ -138,7 +122,7 @@
 
         <br><br>
 
-        <div class="container" id="login">
+        <div class="container" id="userLogin">
             <div class="bg-dark">
                 <br>
                 <h3 class="text-white align-center"> Rota para realizar o login no aplicativo </h3>
@@ -151,6 +135,61 @@
                 <div class="w-75 p-3 align-block">
                     <p>
                         Esta rota é responsável por realizar o login do usuário no aplicativo. 
+                        Para sua utilização sem erros, é necessário que o "email" e a "senha" do usuário 
+                        sejam passados pela tag "body" da aplicação
+                        e a requisição seja através do método /GET. 
+                        <br /><br />
+                        As informações para cadastro podem ser conferidas na tabela abaixo:
+                    </p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="3" style="text-align:center"> Tabela de variáveis para realizar o login</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary align-center">
+                        <td class="td-text-white"> Variável </td>
+                        <td class="td-text-white"> Descrição </td>
+                        <td class="td-text-white"> Tipo do Atributo </td>
+                    </tr>
+                    <tr>
+                        <td> email </td>
+                        <td class="align-center"> Variável que recebe o email do usuário </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                    <tr>
+                        <td> senha </td>
+                        <td class="align-center"> Variável que recebe a senha do usuário </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        
+            <br>
+            <hr>
+            <br>
+        </div>
+
+        <div class="container" id="login">
+            <div class="bg-dark">
+                <br>
+                <h3 class="text-white align-center"> Rota para realizar o cadastro do usuário no aplicativo </h3>
+                <br>
+            </div>
+            
+            <br><br>
+
+            <div class="d-flex justify-content-center">
+                <div class="w-75 p-3 align-block">
+                    <p>
+                        Esta rota é responsável por realizar o cadastro do usuário no aplicativo. 
                         Para sua utilização sem erros, é necessário que o "nickname" e a "senha" do usuário 
                         sejam passados pela tag "body" da aplicação
                         e a requisição seja através do método /GET. 
@@ -175,14 +214,38 @@
                         <td class="td-text-white"> Tipo do Atributo </td>
                     </tr>
                     <tr>
-                        <td> nickname </td>
-                        <td class="align-center"> Variável que recebe o o login do usuário </td>
+                        <td> nome </td>
+                        <td class="align-center"> Variável que recebe o nome da pessoa cadastrada </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                    <tr>
+                        <td> email </td>
+                        <td class="align-center"> Variável que recebe o email da pessoa cadastrada </td>
                         <td class="align-center"> String </td>
                     </tr>
                     <tr>
                         <td> senha </td>
-                        <td class="align-center"> Variável que recebe a senha do usuário </td>
+                        <td class="align-center"> Variável que recebe senha de login da pessoa cadastrada </td>
                         <td class="align-center"> String </td>
+                    </tr>
+                    <tr> 
+                        <td> endereco </td>
+                        <td class="align-center"> Variável que recebe o endereco da pessoa cadastrada </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                    <tr> 
+                        <td> dataAniversario </td>
+                        <td class="align-center"> Variável que recebe a data de aniversário da pessoa cadastrada </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                    <tr> 
+                        <td> telefone </td>
+                        <td class="align-center"> Variável que recebe o telefone da pessoa cadastrada </td>
+                        <td class="align-center"> String </td>
+                    </tr>
+                    <tr> 
+                        <td> imgPerfil </td>
+                        <td class="align-center"> ESSE AINDA NAO ESTA IMPLEMENTADO </td>
                     </tr>
                 
                 </tbody>
