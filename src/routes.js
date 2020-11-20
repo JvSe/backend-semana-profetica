@@ -15,11 +15,11 @@ routes.post('/user/cadastrar', UsuarioController.store);
 routes.get('/user/login', UsuarioController.login);
 //routes.get('/user/editar', UsuarioController.login);
 routes.post('/decreto/cadastrar', DecretoController.store);
-routes.post('/decretos', DecretoController.index);
+routes.get('/decretos', DecretoController.index);
 //routes.get('/decreto/editar', UsuarioController.store);
 //routes.get('/decreto/deletar', UsuarioController.store);
 routes.post('/info/cadastrar', InfoController.store);
-routes.post('/infos', InfoController.store);
+routes.get('/infos', InfoController.index);
 //routes.get('/info/editar', UsuarioController.store);
 
 
