@@ -14,14 +14,14 @@ const UsuarioSchema = new Schema({
         required: true,
     },
     endereco: {
-        type: Boolean,
+        type: String,
         required: true
     },
     data_aniversario: {
         type: String
     },
     telefone: {
-        type: Boolean,
+        type: Number,
     },
     imagem: {
         type: Number,
