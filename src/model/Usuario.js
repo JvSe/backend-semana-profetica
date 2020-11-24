@@ -21,7 +21,7 @@ const UsuarioSchema = new Schema({
         type: String
     },
     telefone: {
-        type: Number,
+        type: String,
     },
     imagem: {
         type: Number,
