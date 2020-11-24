@@ -1,7 +1,3 @@
-/*
-* Aquivo que configura o servidor como um todo, para fazer funcionar
-*/
-
 require('dotenv').config();
 
 const express = require('express');

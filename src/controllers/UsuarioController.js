@@ -25,7 +25,7 @@ module.exports = {
             imagem: null,
         });
 
-        return res.json(usuario)
+        return res.json(usuario);
     },
 
     async login(req, res) {

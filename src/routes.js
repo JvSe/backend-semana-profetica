@@ -11,15 +11,15 @@ routes.get('/',function(req,res){
     res.sendFile(path.join(__dirname + "/site/index.html"));
 });
 
-routes.post('/user/cadastrar', UsuarioController.store);
+routes.post('/user/cadastro', UsuarioController.store);
 routes.post('/user/login', UsuarioController.login);
 routes.get('/users', UsuarioController.allUsers);
 //routes.get('/user/editar', UsuarioController.login);
-routes.post('/decreto/cadastrar', DecretoController.store);
+routes.post('/decreto/cadastro', DecretoController.store);
 routes.get('/decretos', DecretoController.index);
 //routes.get('/decreto/editar', UsuarioController.store);
 //routes.get('/decreto/deletar', UsuarioController.store);
-routes.post('/info/cadastrar', InfoController.store);
+routes.post('/info/cadastro', InfoController.store);
 routes.get('/infos', InfoController.index);
 //routes.get('/info/editar', UsuarioController.store);
 
