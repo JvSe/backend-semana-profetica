@@ -25,7 +25,9 @@ const UsuarioSchema = new Schema({
     },
     imagem: {
         type: Number,
-    },
+    }
 });
 
 module.exports = model('Usuario', UsuarioSchema);
+
+

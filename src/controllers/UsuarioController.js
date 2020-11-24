@@ -42,4 +42,10 @@ module.exports = {
         
     },
 
+    async allUser(req, res) {
+        const allUsers = await Usuario.find();
+
+        return res.json(allUsers);
+    }
+
 }
