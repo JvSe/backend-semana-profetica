@@ -12,7 +12,7 @@ routes.get('/',function(req,res){
 });
 
 routes.post('/user/cadastrar', UsuarioController.store);
-routes.get('/user/login', UsuarioController.login);
+routes.post('/user/login', UsuarioController.login);
 //routes.get('/user/editar', UsuarioController.login);
 routes.post('/decreto/cadastrar', DecretoController.store);
 routes.get('/decretos', DecretoController.index);
