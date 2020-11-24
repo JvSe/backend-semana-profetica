@@ -34,7 +34,7 @@ module.exports = {
 
         for (let u in user) {
             if(user[u].email === email && user[u].senha === senha) {
-                return res.json({login:true, id_user:user[u]})
+                return res.json({login:true, user:user[u]})
             }
         }
 
